@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadSphere AI - Custom Data</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">RoadSphere AI</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Scenario & Results</a>
+                </li>
+                <li class="nav-item">
+                    <a href="copilot.html" class="nav-link">AI Safety Copilot</a>
+                </li>
+                <li class="nav-item">
+                    <a href="simulation.html" class="nav-link">Simulation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="insights.html" class="nav-link">Accident Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="custom-data.html" class="nav-link active">Custom Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="hero">
+            <h2>Custom Data Analysis</h2>
+            <p>Upload your own accident or intervention data for analysis</p>
+        </section>
+
+        <section class="upload-section">
+            <h3>Upload CSV Data</h3>
+            <div class="input-group">
+                <input type="file" id="csvFile" accept=".csv">
+                <button id="uploadBtn" class="btn-primary">Upload File</button>
+            </div>
+            
+            <div id="previewSection" class="hidden">
+                <h4>Data Preview</h4>
+                <div id="tableContainer">
+                    <!-- Table will be populated here -->
+                </div>
+                <button id="buildKnowledgeBtn" class="btn-secondary">Build Custom Knowledge</button>
+            </div>
+        </section>
+
+        <section class="query-section">
+            <h3>Query Your Data</h3>
+            <div class="query-input">
+                <textarea id="queryInput" placeholder="Ask a question about your uploaded data..."></textarea>
+                <button id="queryBtn" class="btn-primary">Query</button>
+            </div>
+            
+            <div class="response-area" id="responseArea">
+                <p>Your query results will appear here...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom-data.js"></script>
+</body>
+</html>

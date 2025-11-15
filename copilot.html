@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadSphere AI - AI Safety Copilot</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">RoadSphere AI</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Scenario & Results</a>
+                </li>
+                <li class="nav-item">
+                    <a href="copilot.html" class="nav-link active">AI Safety Copilot</a>
+                </li>
+                <li class="nav-item">
+                    <a href="simulation.html" class="nav-link">Simulation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="insights.html" class="nav-link">Accident Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="custom-data.html" class="nav-link">Custom Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="hero">
+            <h2>AI Safety Copilot</h2>
+            <p>Ask questions about road safety, interventions, and best practices</p>
+        </section>
+
+        <section class="chat-container">
+            <div class="context-panel">
+                <h3>Last Analysis Context</h3>
+                <div id="analysisContext">
+                    <p>No previous analysis found. Please go to the Scenario & Results page first.</p>
+                </div>
+            </div>
+            
+            <div class="chat-panel">
+                <div class="messages-container" id="messagesContainer">
+                    <div class="message ai-message">
+                        Hello! I'm your RoadSphere AI Safety Copilot. How can I help you with road safety today?
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <textarea id="userInput" placeholder="Ask a question about road safety..." rows="2"></textarea>
+                    <button id="sendButton" class="btn-primary">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/copilot.js"></script>
+</body>
+</html>

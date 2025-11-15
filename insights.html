@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadSphere AI - Accident Insights</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">RoadSphere AI</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Scenario & Results</a>
+                </li>
+                <li class="nav-item">
+                    <a href="copilot.html" class="nav-link">AI Safety Copilot</a>
+                </li>
+                <li class="nav-item">
+                    <a href="simulation.html" class="nav-link">Simulation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="insights.html" class="nav-link active">Accident Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="custom-data.html" class="nav-link">Custom Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="hero">
+            <h2>Accident Insights</h2>
+            <p>Data-driven analysis of common crash causes and prevention strategies</p>
+        </section>
+
+        <section class="filters">
+            <div class="filter-group">
+                <label for="roadTypeFilter">Road Type</label>
+                <select id="roadTypeFilter">
+                    <option value="all">All Road Types</option>
+                    <option value="highway">Highway</option>
+                    <option value="arterial">Arterial Road</option>
+                    <option value="residential">Residential Street</option>
+                    <option value="rural">Rural Road</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="issueTypeFilter">Issue Type</label>
+                <select id="issueTypeFilter">
+                    <option value="all">All Issue Types</option>
+                    <option value="collision">Collision</option>
+                    <option value="nearMiss">Near Miss</option>
+                    <option value="hazard">Hazard Identification</option>
+                    <option value="infrastructure">Infrastructure Issue</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="insights-grid" id="insightsGrid">
+            <!-- Insights cards will be populated here -->
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/insights.js"></script>
+</body>
+</html>

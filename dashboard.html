@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadSphere AI - Road Safety Intervention Studio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Professional Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">RoadSphere AI</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link active">Scenario & Results</a>
+                </li>
+                <li class="nav-item">
+                    <a href="copilot.html" class="nav-link">AI Safety Copilot</a>
+                </li>
+                <li class="nav-item">
+                    <a href="simulation.html" class="nav-link">Simulation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="insights.html" class="nav-link">Accident Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="custom-data.html" class="nav-link">Custom Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="hero">
+            <h2>Analyze Road Scenarios with AI</h2>
+            <p>Describe a road situation to get safety insights and recommendations</p>
+        </section>
+
+        <section class="form-section">
+            <div class="input-group">
+                <label for="roadType">Road Type</label>
+                <select id="roadType">
+                    <option value="highway">Highway</option>
+                    <option value="arterial">Arterial Road</option>
+                    <option value="residential">Residential Street</option>
+                    <option value="rural">Rural Road</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="issueType">Issue Type</label>
+                <select id="issueType">
+                    <option value="collision">Collision</option>
+                    <option value="nearMiss">Near Miss</option>
+                    <option value="hazard">Hazard Identification</option>
+                    <option value="infrastructure">Infrastructure Issue</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="environment">Environment</label>
+                <select id="environment">
+                    <option value="dayClear">Day - Clear</option>
+                    <option value="dayRain">Day - Rain</option>
+                    <option value="nightClear">Night - Clear</option>
+                    <option value="nightRain">Night - Rain</option>
+                    <option value="fog">Fog</option>
+                </select>
+            </div>
+
+            <div class="slider-group">
+                <label for="speedSlider">Speed: <span id="speedValue">50</span> km/h</label>
+                <input type="range" id="speedSlider" min="0" max="120" value="50">
+            </div>
+
+            <div class="slider-group">
+                <label for="trafficSlider">Traffic Density: <span id="trafficValue">5</span>/10</label>
+                <input type="range" id="trafficSlider" min="1" max="10" value="5">
+            </div>
+
+            <div class="input-group">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Describe the road scenario in detail..."></textarea>
+            </div>
+
+            <button id="analyzeBtn" class="btn-primary">Analyze Scenario</button>
+        </section>
+
+        <section id="resultsSection" class="results-section hidden">
+            <h3>Analysis Results</h3>
+            
+            <div class="result-card">
+                <h4>Problem Summary</h4>
+                <p id="problemSummary">Results will appear here...</p>
+            </div>
+
+            <div class="result-card">
+                <h4>Possible Causes</h4>
+                <ul id="possibleCauses">
+                    <!-- Causes will be populated here -->
+                </ul>
+            </div>
+
+            <div class="result-card">
+                <h4>Risk Score</h4>
+                <div class="risk-score-container">
+                    <div class="risk-score-bar">
+                        <div id="riskScoreBar" class="risk-score-fill" style="width: 0%"></div>
+                    </div>
+                    <span id="riskScoreValue">0</span>/100
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h4>Recommended Interventions</h4>
+                <ul id="interventions">
+                    <!-- Interventions will be populated here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/scenario.js"></script>
+</body>
+</html>

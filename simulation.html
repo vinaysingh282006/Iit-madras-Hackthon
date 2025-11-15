@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadSphere AI - Simulation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Professional Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">RoadSphere AI</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Scenario & Results</a>
+                </li>
+                <li class="nav-item">
+                    <a href="copilot.html" class="nav-link">AI Safety Copilot</a>
+                </li>
+                <li class="nav-item">
+                    <a href="simulation.html" class="nav-link active">Simulation</a>
+                </li>
+                <li class="nav-item">
+                    <a href="insights.html" class="nav-link">Accident Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="custom-data.html" class="nav-link">Custom Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="hero">
+            <h2>Road Safety Simulation</h2>
+            <p>Visualize road scenarios and safety interventions</p>
+        </section>
+
+        <section class="simulation-container">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="sceneType">Scene Type</label>
+                    <select id="sceneType">
+                        <option value="straight">Straight Road</option>
+                        <option value="curve">Curve</option>
+                        <option value="t-intersection">T-Intersection</option>
+                        <option value="school-zone">School Zone</option>
+                    </select>
+                </div>
+                
+                <div class="toggle-group">
+                    <div class="toggle-item">
+                        <input type="checkbox" id="rumbleStrips" checked>
+                        <label for="rumbleStrips">Rumble Strips</label>
+                    </div>
+                    <div class="toggle-item">
+                        <input type="checkbox" id="guardrail" checked>
+                        <label for="guardrail">Guardrail</label>
+                    </div>
+                    <div class="toggle-item">
+                        <input type="checkbox" id="signage" checked>
+                        <label for="signage">Signage</label>
+                    </div>
+                    <div class="toggle-item">
+                        <input type="checkbox" id="zebraCrossing" checked>
+                        <label for="zebraCrossing">Zebra Crossing</label>
+                    </div>
+                    <div class="toggle-item">
+                        <input type="checkbox" id="lighting" checked>
+                        <label for="lighting">Lighting</label>
+                    </div>
+                </div>
+                
+                <button id="applyAiPackage" class="btn-secondary">Apply AI Package</button>
+            </div>
+            
+            <div class="visualization">
+                <div class="road" id="roadVisualization">
+                    <!-- Road visualization will be drawn here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/simulation.js"></script>
+</body>
+</html>
